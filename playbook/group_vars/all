@@ -1,6 +1,6 @@
 # common variables
-cluster_name: k8s
-cluster_zone: CH-GVA-2
+cluster_name: vic-k8s
+cluster_zone: AT-VIE-1
 ssh_key: "{{ cluster_name }}-key"
 anti_affinity_group_name: "{{ cluster_name }}-aag"
 
