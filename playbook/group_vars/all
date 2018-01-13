@@ -5,6 +5,7 @@ ssh_key: "{{ cluster_name }}-key"
 anti_affinity_group_name: "{{ cluster_name }}-aag"
 
 # master node variables
+initial_num_master_nodes: 1
 master_security_group_name: "{{ cluster_name }}-master-sg"
 master_instance_size: Tiny
 
