@@ -9,7 +9,7 @@ master_security_group_name: "{{ cluster_name }}-master-sg"
 master_instance_size: Tiny
 
 # worker node variables
-initial_num_worker_nodes: 3
+initial_num_worker_nodes: 1
 worker_security_group_name: "{{ cluster_name }}-worker-sg"
 worker_instance_size: Small
 
