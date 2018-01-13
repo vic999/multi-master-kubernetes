@@ -1,5 +1,5 @@
   - uri:
-      url: "https://discovery.etcd.io/new?size={{ initial_num_master_nodes }}"
+      url: "https://discovery.etcd.io/new?size=3"
       return_content: yes
     register: infra_etcd2_discovery_url
 
@@ -13,7 +13,7 @@
       security_groups: [ '{{ master_security_group_name }}' ]
       user_data: "{{ lookup('template', '../templates/master_user_data.j2') }}"
       zone: "{{ cluster_zone }}"
-    with_sequence: count={{ initial_num_master_nodes }}
+    with_sequence: count=3
     register: created_master_nodes
 
   - add_host:
